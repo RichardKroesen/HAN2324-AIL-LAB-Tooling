@@ -68,8 +68,52 @@ def plot_all():
     if __name__ == "__main__":
         plt.show()
 
+def plot_singleCPR(filename=''):
+    """
+    Load a single bunch from a CSV file and plot it.
+    """
+
+    if filename == '':
+        filenames = glob(join(cfg.CAPTURED_DIR_PATH, '*.csv'))
+        assert len(filenames) != 0, 'No CSV files'
+
+        # Get first CSV file from the folder
+        filename = filenames[0]
+    else:
+        filename = join(cfg.CAPTURED_DIR_PATH, filename)
+
+    print(filename)
+    bunch = CustomBunch.load_csv(filename)
+    
+    df = bunch.to_dataframe()
+
+    # Plot 1
+    plt.figure(figsize=(10, 10))
+    plt.subplot(2, 1, 1)
+    
+    for attr in bunch.attributes:
+        if attr.startswith('FP'):
+            plt.plot(df.index, df[attr], linestyle='-', label=attr)
+
+    plt.title('Finger Placement Indexes')
+    plt.ylabel('FP Values')
+    plt.legend()
+    plt.tight_layout()
+    plt.grid(True)
+
+    # Plot 2 ToF
+    plt.subplot(2, 1, 2)
+    # plt.stem(df.index, df['ToF'], markerfmt=None, linefmt='darkblue')
+    plt.plot(df.index, df['ToF'], color='darkblue')
+    plt.title('ToF Over Intervals')
+    plt.ylabel('ToF Value')
+    plt.grid(True)
+    plt.legend()
+
+    plt.tight_layout()
+    plt.show()
 
 if __name__ == "__main__":
-    plot_single('stationary.csv')
-    plot_single('14524-testCPR.csv')
-    #plot_all()
+    # # plot_single('14524-testCPR.csv')
+    # plot_all()
+    plot_singleCPR('14524-testCPR.csv')

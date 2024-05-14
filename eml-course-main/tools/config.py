@@ -23,17 +23,16 @@ BAUDRATE = 115200
 BLOCK_SIZE = 100
 BLOCK_TYPE = 'BLOCK'
 
-
 # Directory paths. The data directory is located relative to this file
 # config.py.
-DATA_DIR_PATH = join(dirname(realpath(__file__)), 'data')
-CAPTURED_DIR_PATH = join(DATA_DIR_PATH, 'captured')
-PREPROCESSING_DIR_PATH = join(DATA_DIR_PATH, 'preprocessed')
-PREPROCESSING_FEATURES_DIR_PATH = join(PREPROCESSING_DIR_PATH, 'features')
-PREPROCESSING_FILTERS_DIR_PATH = join(PREPROCESSING_DIR_PATH, 'filters')
-PREPROCESSING_NORMALIZATIONS_DIR_PATH = join(PREPROCESSING_DIR_PATH, 'normalizations')
-MODEL_DIR_PATH = join(DATA_DIR_PATH, 'model')
-MODEL_EMBEDDING_DIR_PATH = join(DATA_DIR_PATH, 'model_embedding')
+DATA_DIR_PATH                           = join(dirname(realpath(__file__)), 'data')
+CAPTURED_DIR_PATH                       = join(DATA_DIR_PATH, 'captured')
+PREPROCESSING_DIR_PATH                  = join(DATA_DIR_PATH, 'preprocessed')
+PREPROCESSING_FEATURES_DIR_PATH         = join(PREPROCESSING_DIR_PATH, 'features')
+PREPROCESSING_FILTERS_DIR_PATH          = join(PREPROCESSING_DIR_PATH, 'filters')
+PREPROCESSING_NORMALIZATIONS_DIR_PATH   = join(PREPROCESSING_DIR_PATH, 'normalizations')
+MODEL_DIR_PATH                          = join(DATA_DIR_PATH, 'model')
+MODEL_EMBEDDING_DIR_PATH                = join(DATA_DIR_PATH, 'model_embedding')
 
 # Create a list of all paths
 paths = [
