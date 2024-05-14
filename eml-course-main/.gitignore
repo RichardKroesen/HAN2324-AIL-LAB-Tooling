@@ -1,7 +1,6 @@
 general/
 todo/
 results/
-tools/data/
 *.ppt*
 *.xls*
 *__pycache__*
