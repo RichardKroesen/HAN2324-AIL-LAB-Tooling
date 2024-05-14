@@ -31,15 +31,15 @@ import serial
 
 # TODO Set the label for the recording here. Alternatively, use the command
 #      line -l option
-LABEL_NAME = 'stationary'
+LABEL_NAME = '14524-testCPR-SingleFingerLeft'
 
 # TODO Set the attribute names from the microcontroller data here.
 #      These attributes are application dependent! The attributes correspond
 #      to the comma seperated sensor values transmitted by the microcontroller.
-ATTRIBUTE_NAMES = ['x_out','y_out','z_out']
+ATTRIBUTE_NAMES = ['FP1','FP2','FP3','FP4','FP5','FP6','FP7','FP8','ToF']
 
 # TODO Set number of samples (or press CTRL+C to abort)
-N_SAMPLES = 1000
+N_SAMPLES = 10000
 
 def main():
     print("Press CTRL+C to quit")
