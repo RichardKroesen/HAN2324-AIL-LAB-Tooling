@@ -1,0 +1,25 @@
+general/
+todo/
+results/
+tools/data/
+*.ppt*
+*.xls*
+*__pycache__*
+*.pio*
+*.vscode*
+*.venv*
+*.cdr
+*.drawio
+
+# MDK generated files
+**/obj
+*.uvgui*
+
+# Eclipse generated files
+**/Debug
+**/Release
+**/.metadata
+*.launch
+
+# Microchip studio generated files
+**/Debug
