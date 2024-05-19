@@ -47,7 +47,7 @@ class Widget(QWidget):
             for i in range(8):
                label = getattr(self.ui,f'label_{i+1}')
                value = int(values[i+2])
-               if value > 3700:
+               if value > 3000:
                     label.setStyleSheet("QLabel { background-color: red; }")
                else:
                     label.setStyleSheet("QLabel { background-color: none; }")
