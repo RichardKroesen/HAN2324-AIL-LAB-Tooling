@@ -1,3 +1,0 @@
-/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/CMakeFiles/libserialport-populate.dir
-/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/CMakeFiles/edit_cache.dir
-/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/CMakeFiles/rebuild_cache.dir
