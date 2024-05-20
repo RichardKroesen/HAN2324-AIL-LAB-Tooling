@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/CMakeFiles/libserialport-populate"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/CMakeFiles/libserialport-populate.rule"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/CMakeFiles/libserialport-populate-complete.rule"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/libserialport-populate-prefix/src/libserialport-populate-stamp/libserialport-populate-build.rule"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/libserialport-populate-prefix/src/libserialport-populate-stamp/libserialport-populate-configure.rule"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/libserialport-populate-prefix/src/libserialport-populate-stamp/libserialport-populate-download.rule"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/libserialport-populate-prefix/src/libserialport-populate-stamp/libserialport-populate-install.rule"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/libserialport-populate-prefix/src/libserialport-populate-stamp/libserialport-populate-mkdir.rule"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/libserialport-populate-prefix/src/libserialport-populate-stamp/libserialport-populate-patch.rule"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/libserialport-populate-prefix/src/libserialport-populate-stamp/libserialport-populate-test.rule"
+		},
+		{
+			"file" : "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/libserialport-populate-prefix/src/libserialport-populate-stamp/libserialport-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"libserialport-populate"
+		],
+		"name" : "libserialport-populate"
+	}
+}

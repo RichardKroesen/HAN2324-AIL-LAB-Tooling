@@ -1,0 +1,15 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=git
+command=/usr/bin/cmake;-P;/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build/_deps/libserialport-subbuild/libserialport-populate-prefix/tmp/libserialport-populate-gitclone.cmake
+source_dir=/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport
+work_dir=/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app
+repository=git://sigrok.org/libserialport
+remote=origin
+init_submodules=TRUE
+recurse_submodules=--recursive
+submodules=
+CMP0097=NEW
+

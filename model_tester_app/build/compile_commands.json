@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build",
+  "command": "/usr/bin/gcc -DSP_PRIV=\"__attribute__((visibility(\\\"hidden\\\")))\" -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app -g -std=gnu11 -o CMakeFiles/libserialport.dir/libserialport/linux.c.o -c /mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport/linux.c",
+  "file": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport/linux.c",
+  "output": "CMakeFiles/libserialport.dir/libserialport/linux.c.o"
+},
+{
+  "directory": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build",
+  "command": "/usr/bin/gcc -DSP_PRIV=\"__attribute__((visibility(\\\"hidden\\\")))\" -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app -g -std=gnu11 -o CMakeFiles/libserialport.dir/libserialport/linux_termios.c.o -c /mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport/linux_termios.c",
+  "file": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport/linux_termios.c",
+  "output": "CMakeFiles/libserialport.dir/libserialport/linux_termios.c.o"
+},
+{
+  "directory": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build",
+  "command": "/usr/bin/gcc -DSP_PRIV=\"__attribute__((visibility(\\\"hidden\\\")))\" -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app -g -std=gnu11 -o CMakeFiles/libserialport.dir/libserialport/serialport.c.o -c /mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport/serialport.c",
+  "file": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport/serialport.c",
+  "output": "CMakeFiles/libserialport.dir/libserialport/serialport.c.o"
+},
+{
+  "directory": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build",
+  "command": "/usr/bin/gcc -DSP_PRIV=\"__attribute__((visibility(\\\"hidden\\\")))\" -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app -g -std=gnu11 -o CMakeFiles/libserialport.dir/libserialport/timing.c.o -c /mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport/timing.c",
+  "file": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport/timing.c",
+  "output": "CMakeFiles/libserialport.dir/libserialport/timing.c.o"
+},
+{
+  "directory": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build",
+  "command": "/usr/bin/gcc -DSP_PRIV=\"__attribute__((visibility(\\\"hidden\\\")))\" -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app -g -std=gnu11 -o CMakeFiles/main.dir/main.c.o -c /mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/main.c",
+  "file": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/main.c",
+  "output": "CMakeFiles/main.dir/main.c.o"
+},
+{
+  "directory": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build",
+  "command": "/usr/bin/gcc -DSP_PRIV=\"__attribute__((visibility(\\\"hidden\\\")))\" -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app -g -std=gnu11 -o CMakeFiles/main.dir/lib/normalizations.c.o -c /mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib/normalizations.c",
+  "file": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib/normalizations.c",
+  "output": "CMakeFiles/main.dir/lib/normalizations.c.o"
+},
+{
+  "directory": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build",
+  "command": "/usr/bin/gcc -DSP_PRIV=\"__attribute__((visibility(\\\"hidden\\\")))\" -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app -g -std=gnu11 -o CMakeFiles/main.dir/lib/filters.c.o -c /mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib/filters.c",
+  "file": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib/filters.c",
+  "output": "CMakeFiles/main.dir/lib/filters.c.o"
+},
+{
+  "directory": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/build",
+  "command": "/usr/bin/gcc -DSP_PRIV=\"__attribute__((visibility(\\\"hidden\\\")))\" -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/libserialport -I/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app -g -std=gnu11 -o CMakeFiles/main.dir/lib/features_calc.c.o -c /mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib/features_calc.c",
+  "file": "/mnt/586d8ccd-e023-4531-ad6e-e06b8e495334/HAN2324-AIL-LAB-Tooling/model_tester_app/lib/features_calc.c",
+  "output": "CMakeFiles/main.dir/lib/features_calc.c.o"
+}
+]
