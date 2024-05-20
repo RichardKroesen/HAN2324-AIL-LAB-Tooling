@@ -18,7 +18,7 @@ import ctypes
 from os.path import join, isfile
 import normalization_functions_c2dll
 
-NORMALIZATIONS_DLL = join(cfg.PREPROCESSING_NORMALIZATIONS_DIR_PATH, 'normalizations.dll')
+NORMALIZATIONS_DLL = join(cfg.PREPROCESSING_NORMALIZATIONS_DIR_PATH, 'libnormalizations.so')
 
 def check_normalizations_dll():
     """

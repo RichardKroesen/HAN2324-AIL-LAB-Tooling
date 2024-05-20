@@ -23,7 +23,7 @@ import filter_functions as ff
 
 
 # TODO Set filter functions here
-FILTER_FUNCTIONS = [ff.fir]
+FILTER_FUNCTIONS = [ff.raw]
 #FILTER_FUNCTIONS = [ff.fir, ff.raw]
 
 # TODO Set filter specific arguments

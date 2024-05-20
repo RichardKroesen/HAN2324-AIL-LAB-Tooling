@@ -83,5 +83,5 @@ def plot_all():
 
 
 if __name__ == "__main__":
-    # plot_single('stationary.csv')
+    #  plot_single('19524-testCPR-stationary.csv')
     plot_all()

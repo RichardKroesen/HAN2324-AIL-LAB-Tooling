@@ -18,7 +18,7 @@ import ctypes
 from os.path import join, isfile
 import feature_functions_c2dll
 
-FEATURES_DLL = join(cfg.PREPROCESSING_FEATURES_DIR_PATH, 'features.dll')
+FEATURES_DLL = join(cfg.PREPROCESSING_FEATURES_DIR_PATH, 'libfeatures.so')
 
 def check_features_dll():
     """

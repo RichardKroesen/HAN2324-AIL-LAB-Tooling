@@ -22,7 +22,7 @@ from distutils.ccompiler import new_compiler
 from shutil import copyfile, rmtree
 
 # TODO The list of filter functions that are implemented in filters.c.
-FUNCTIONS_IN_C_FILE = ['fir']
+FUNCTIONS_IN_C_FILE = ['raw']
 
 # Set to False if you would like to examine the temporary files that are
 # created.

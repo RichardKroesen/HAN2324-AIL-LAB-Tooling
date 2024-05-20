@@ -31,7 +31,7 @@ import serial
 
 # TODO Set the label for the recording here. Alternatively, use the command
 #      line -l option
-LABEL_NAME = '19524-testCPR-correct-higher_sec_fp'
+LABEL_NAME = '19524-testCPR-optimal-fp'
 
 # TODO Set the attribute names from the microcontroller data here.
 #      These attributes are application dependent! The attributes correspond

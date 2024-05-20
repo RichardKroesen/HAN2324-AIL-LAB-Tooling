@@ -47,6 +47,7 @@ class MainWindow(QWidget):
 
     def update_labels(self, data):
         # Update GUI labels based on data from the CSV row
+        print(self.data_index)
         for i in range(8):
             label = getattr(self.ui, f'label_{i+1}')
             value = int(float(data[i+3]))
