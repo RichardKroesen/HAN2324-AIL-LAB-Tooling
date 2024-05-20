@@ -81,7 +81,6 @@ def plot_all():
     if __name__ == "__main__":
         plt.show()
 
-
 if __name__ == "__main__":
-    # plot_single('stationary.csv')
-    plot_all()
+    plot_single('14524-testCPR.csv')
+    # plot_all()

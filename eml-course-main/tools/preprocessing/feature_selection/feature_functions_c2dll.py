@@ -22,7 +22,7 @@ from distutils.ccompiler import new_compiler
 from shutil import copyfile, rmtree
 
 # TODO The list of feature functions that are implemented in features.c.
-FUNCTIONS_IN_C_FILE = ['min','max','mean','variance','energy','peak_to_peak']
+FUNCTIONS_IN_C_FILE = ['min','max','mean','variance','energy','peak_to_peak','find_crossings']
 
 # Set to False if you would like to examine the temporary files that are
 # created.
@@ -93,7 +93,6 @@ def main():
     print('Functions compiled:')
     print('\n'.join(str("  "+x+"()") for x in FUNCTIONS_IN_C_FILE))
     print('Generated ' + output_libname)
-
 
 if __name__ == "__main__":
     main()

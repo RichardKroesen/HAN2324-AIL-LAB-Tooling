@@ -18,10 +18,12 @@ from os import makedirs
 COMPORT = 'COM3'
 BAUDRATE = 115200
 
+SIGNAL_FREQUENCY = 10
+
 # TODO Set feature calculation parameters
 #      Valid BLOCK_TYPE values are: BLOCK or SLIDING
-BLOCK_SIZE = 100
-BLOCK_TYPE = 'BLOCK'
+BLOCK_SIZE = 50
+BLOCK_TYPE = 'SLIDING'
 
 # Directory paths. The data directory is located relative to this file
 # config.py.

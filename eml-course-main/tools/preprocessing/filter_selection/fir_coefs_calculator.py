@@ -14,7 +14,7 @@ from scipy import signal
 
 # Set FIR filter parameters
 numtaps = 8
-cutoff = 2
+cutoff = 5
 fs = 100
 
 # Calculate coefficients

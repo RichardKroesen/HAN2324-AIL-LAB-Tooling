@@ -52,6 +52,8 @@ float variance(float *data, const uint32_t n);
 float energy(float *data, const uint32_t n);
 float peak_to_peak(float *data, const uint32_t n);
 
+float find_crossings(float *data, const uint32_t n);
+
 #endif // _FEATURES_H_
 
 #ifdef __cplusplus

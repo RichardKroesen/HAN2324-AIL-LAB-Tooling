@@ -113,3 +113,65 @@ def raw(data, n=None):
     return the same raw input data.
     """
     return data[0] if (len(data) > 0) else None
+
+def find_crossings(data):
+    """
+    Python wrapper for the find_crossings function from the features DLL. This function
+    identifies threshold crossings in the input data array based on a predefined threshold.
+
+    :param data: List or array of float data representing the signal.
+    :return: The count of threshold crossings detected in the data.
+    """
+    check_features_dll()
+    c_lib = ctypes.CDLL(FEATURES_DLL)
+
+    c_lib.find_crossings.restype = ctypes.c_uint32
+    c_lib.find_crossings.argtypes = [
+        ctypes.POINTER(ctypes.c_float),  
+        ctypes.c_uint32,                
+    ]
+
+    n = len(data)
+    x = (ctypes.c_float * n)(*data)
+
+    num_crossings = c_lib.find_crossings(x, ctypes.c_uint32(n))
+
+    return num_crossings
+
+def frequency(data, sampling_rate):
+    """
+    Calculates the frequency of threshold crossings in the data.
+
+    This function counts the number of times the signal crosses a specified threshold within a given data chunk,
+    then uses the sampling rate to determine the frequency of these crossings in Hz, assuming that crossings
+    are reset for each chunk.
+
+    :param data: List or array of float data representing the signal.
+    :param sampling_rate: The number of samples per second.
+    :return: The frequency of the threshold crossings in Hz.
+    """
+    check_features_dll()
+    c_lib = ctypes.CDLL(FEATURES_DLL)
+
+    c_lib.find_crossings.restype = ctypes.c_uint32
+    c_lib.find_crossings.argtypes = [
+        ctypes.POINTER(ctypes.c_float),  
+        ctypes.c_uint32,                 
+    ]
+
+    n = len(data)
+    x = (ctypes.c_float * n)(*data)
+
+    # Get the number of crossings
+    num_crossings = c_lib.find_crossings(x, ctypes.c_uint32(n))
+
+    # Time duration for the data chunk in seconds
+    time_duration = n / sampling_rate
+
+    # Calculate the frequency of crossings
+    if time_duration > 0:
+        frequency = num_crossings / time_duration
+    else:
+        frequency = 0
+
+    return frequency

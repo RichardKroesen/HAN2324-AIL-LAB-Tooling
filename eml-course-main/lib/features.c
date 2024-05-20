@@ -35,6 +35,9 @@
  *****************************************************************************/
 
 #include "features.h"
+#include <stdbool.h> 
+
+#define THRESHOLD       40.0f // Based on quick self-analysis of the data log.
 
 /*!
  * \brief Finds the minimum value in the input data
@@ -250,4 +253,43 @@ float peak_to_peak(float *data, const uint32_t n)
     }
 
     return max - min;
+}
+
+/*!
+ * \brief Identifies crossings of a specified threshold in the input data
+ *
+ * This function counts the occurrences of signal crossings over a specified threshold.
+ * It can be particularly useful in scenarios like monitoring the frequency of chest
+ * compressions in CPR, where the regularity and frequency of the signal are of interest.
+ *
+ * Example of threshold crossings in a periodic signal:
+ *
+ *       .   .             .       .
+ *     .       .         .           .
+ *    .          .     .               .       .
+ *   .             . .                     . .   
+ * ----------------X-------------------------X----  Threshold
+ *                  ↑                         ↑
+ *                Cross                      Cross
+ *
+ *  ---------------------------------------------------------- ->t
+ *    |                                                   |
+ *    |<------------------- n samples ------------------->|
+ *
+ * \param[in]  data A pointer to the data array
+ * \param[in]  n    The number of data items in the array
+ * \return The number of threshold crossings identified
+ */
+float find_crossings(float *data, const uint32_t n) {
+    uint32_t count = 0;
+    bool was_below = (data[0] < THRESHOLD);
+
+    for (uint32_t i = 1; i < n; ++i) {
+        bool is_below = data[i] < THRESHOLD;
+        if (was_below != is_below) {
+            count++;
+            was_below = is_below;
+        }
+    }
+    return (float)(count);
 }

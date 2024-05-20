@@ -21,16 +21,15 @@ from os.path import join
 import numpy as np
 import feature_functions as ff
 
-
 # TODO Set feature functions here
-FEATURE_FUNCTIONS = [ff.variance]
+# FEATURE_FUNCTIONS = [ff.variance]
 # FEATURE_FUNCTIONS = [ff.raw,ff.min,ff.max,ff.mean,ff.variance,ff.energy,ff.peak_to_peak]
 # FEATURE_FUNCTIONS = [np.mean,np.var,np.median,np.ptp,np.std]
-
+FEATURE_FUNCTIONS = [ff.find_crossings, ff.frequency]
 # TODO Set input directory path for feature calculation
 #INPUT_DIR_PATH = cfg.CAPTURED_DIR_PATH
-#INPUT_DIR_PATH = cfg.PREPROCESSING_FILTERS_DIR_PATH
-INPUT_DIR_PATH = cfg.PREPROCESSING_NORMALIZATIONS_DIR_PATH
+INPUT_DIR_PATH = cfg.PREPROCESSING_FILTERS_DIR_PATH
+# INPUT_DIR_PATH = cfg.PREPROCESSING_NORMALIZATIONS_DIR_PATH
 
 def main():
 
@@ -79,9 +78,12 @@ def main():
                     r = []
                     # Loop all blocks
                     for block in d:
-                        # Append the calculated feature of this block to the
-                        # result
-                        r.append(f(block))        
+                        if f.__name__ == 'frequency':
+                            r.append(f(block, cfg.SIGNAL_FREQUENCY))
+                        else:
+                            # Append the calculated feature of this block to the
+                            # result
+                            r.append(f(block))
                     # Append the result to the data
                     data.append(r)
                     # Combine this attribute and feature name to a new
@@ -100,9 +102,12 @@ def main():
                     while(len(tmp) >= int(cfg.BLOCK_SIZE)):
                         # Get BLOCK_SIZE elements from the start of data
                         block = tmp[0:int(cfg.BLOCK_SIZE)]
-                        # Append the calculated feature of this block to the
-                        # result
-                        r.append(f(block))      
+                        if f.__name__ == 'frequency':
+                            r.append(f(block, cfg.SIGNAL_FREQUENCY)) 
+                        else:
+                            # Append the calculated feature of this block to the
+                            # result
+                            r.append(f(block)) 
                         # Remove the first element from the data  
                         tmp = np.delete(tmp,0)
                     # Append the result to the data

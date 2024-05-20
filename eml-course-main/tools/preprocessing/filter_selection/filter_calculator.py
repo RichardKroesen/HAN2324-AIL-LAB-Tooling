@@ -30,9 +30,10 @@ FILTER_FUNCTIONS = [ff.fir]
 #      The number of arguments must be equal to the number of arguments in
 #      FILTER_FUNCTIONS!
 ARGS = [
-    # FIR low pass filter f_s=100Hz, f_cutoff=2Hz and 8 coefs.
-    [0.02017993, 0.06489484, 0.16638971, 0.24853553, 
-     0.24853553, 0.16638971, 0.06489484, 0.02017993],
+    # # FIR low pass filter f_s=100Hz, f_cutoff=2Hz and 8 coefs.
+    # [0.02017993, 0.06489484, 0.16638971, 0.24853553, 
+    #  0.24853553, 0.16638971, 0.06489484, 0.02017993],
+    [0.017406324694453395, 0.061207387453260195, 0.16616440570451896, 0.2552218821477675, 0.2552218821477675, 0.16616440570451896, 0.061207387453260195, 0.017406324694453395]
 ]
 
 # TODO Set input file path for calculation normalizations
