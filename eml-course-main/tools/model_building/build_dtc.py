@@ -30,7 +30,8 @@ def main():
 
     filenames = glob(join(cfg.PREPROCESSING_FEATURES_DIR_PATH, '*.csv'))
     assert(len(filenames) != 0), 'No CSV files'
-
+    
+    CustomBunch.clear
     # Add all bunches into one new bunch
     bunch = CustomBunch.load_csv(filenames[0])
     for filename in filenames[1:]:

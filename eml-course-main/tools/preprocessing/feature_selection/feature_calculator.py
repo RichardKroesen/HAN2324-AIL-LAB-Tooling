@@ -23,14 +23,14 @@ import feature_functions as ff
 
 
 # TODO Set feature functions here
-FEATURE_FUNCTIONS = [ff.variance]
+FEATURE_FUNCTIONS = [ff.variance, ff.mean, ff.raw]
 # FEATURE_FUNCTIONS = [ff.raw,ff.min,ff.max,ff.mean,ff.variance,ff.energy,ff.peak_to_peak]
 # FEATURE_FUNCTIONS = [np.mean,np.var,np.median,np.ptp,np.std]
 
 # TODO Set input directory path for feature calculation
-#INPUT_DIR_PATH = cfg.CAPTURED_DIR_PATH
+INPUT_DIR_PATH = cfg.CAPTURED_DIR_PATH
 #INPUT_DIR_PATH = cfg.PREPROCESSING_FILTERS_DIR_PATH
-INPUT_DIR_PATH = cfg.PREPROCESSING_NORMALIZATIONS_DIR_PATH
+#INPUT_DIR_PATH = cfg.PREPROCESSING_NORMALIZATIONS_DIR_PATH
 
 def main():
 
