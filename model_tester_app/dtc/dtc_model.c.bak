@@ -1,0 +1,59 @@
+typedef enum
+{
+    not_recomended_low_fp_correct_force = 0,
+    optimal = 1,
+    suboptimal_high_finger_placement = 2,
+    suboptimal_left_centered = 3,
+    undetermined = 4,
+}dtc_t;
+
+/*
+ * \brief Decision tree classifier
+ * 
+ * Decision tree classifier based on the following input characteristics:
+ *   BLOCK_SIZE: 100
+ *   BLOCK_TYPE: BLOCK
+ * 
+ * \return dtc_t
+ *   0  not_recomended_low_fp_correct_force
+ *   1  optimal
+ *   2  suboptimal_high_finger_placement
+ *   3  suboptimal_left_centered
+ *   4  undetermined
+ */
+dtc_t dtc(const float FP3_min, const float FP8_max, const float FP1_variance, const float ToF_variance)
+{
+    dtc_t ret;
+
+    if(FP8_max <= 3387.000000f)
+    {
+        if(ToF_variance <= 66.925595f)
+        {
+             ret = undetermined;
+        }
+        else // ToF_variance > 66.925595f
+        {
+            if(FP1_variance <= 1424.089302f)
+            {
+                if(FP3_min <= 170.500000f)
+                {
+                     ret = optimal;
+                }
+                else // FP3_min > 170.500000f
+                {
+                     ret = suboptimal_high_finger_placement;
+                }
+            }
+            else // FP1_variance > 1424.089302f
+            {
+                 ret = not_recomended_low_fp_correct_force;
+            }
+        }
+    }
+    else // FP8_max > 3387.000000f
+    {
+         ret = suboptimal_left_centered;
+    }
+
+    return ret;
+}

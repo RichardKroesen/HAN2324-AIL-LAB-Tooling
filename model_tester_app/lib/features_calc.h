@@ -35,21 +35,22 @@
  *****************************************************************************/
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" {
 #endif
 
 /// Include guard to prevent recursive inclusion
 #ifndef _FEATURES_H_
 #define _FEATURES_H_
 
-    // Functions are documented in the source file
+#include <stdint.h>
 
-    float min(float *data, const uint32_t n);
-    float mean(float *data, const uint32_t n);
-    float variance(float *data, const uint32_t n);
-    float energy(float *data, const uint32_t n);
-    float peak_to_peak(float *data, const uint32_t n);
+// Functions are documented in the source file
+float max(float *data, const uint32_t n);
+float min(float *data, const uint32_t n);
+float mean(float *data, const uint32_t n);
+float variance(float *data, const uint32_t n);
+float energy(float *data, const uint32_t n);
+float peak_to_peak(float *data, const uint32_t n);
 
 #endif // _FEATURES_H_
 

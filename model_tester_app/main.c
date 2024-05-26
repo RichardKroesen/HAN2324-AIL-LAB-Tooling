@@ -45,7 +45,7 @@
 #include "config.h"
 #include "libserialport.h"
 
-#define N_BUFFER (10)
+#define N_BUFFER (100)
 
 char *port_name = "/dev/ttyACM0";
 
@@ -89,8 +89,6 @@ int check(enum sp_return result)
         }
 }
 
-#include <string.h>
-#include <libserialport.h>
 
 char *read_line_from_serial(struct sp_port *port) {
     static char buffer[4096];  // Larger buffer to handle more data
@@ -223,9 +221,15 @@ int main(void)
             float fp6_mean = mean(buffer_fp5_out, N_BUFFER);
             float fp7_mean = mean(buffer_fp6_out, N_BUFFER);
             float fp8_mean = mean(buffer_fp7_out, N_BUFFER);
-
-            dtc_t label = dtc(fp5_var, buffer_fp1_out[n], fp4_mean, buffer_fp7_out[n], buffer_fp5_out[n], tof_mean, fp7_mean, buffer_fp6_out[n], fp8_mean, fp6_mean, buffer_fp1_out[n], fp1_mean, fp3_mean, fp5_mean, fp3_var);
-            
+            float fp3_min = min(buffer_fp2_out, N_BUFFER);
+            float fp7_max = max(buffer_fp6_out, N_BUFFER);
+            float fp1_var = variance(buffer_fp0_out, N_BUFFER);
+            float tof_var = variance(buffer_tof_out, N_BUFFER);
+            float fp3_max = max(buffer_fp2_out, N_BUFFER);
+            float fp5_min = min(buffer_fp4_out, N_BUFFER);
+            float fp2_var = variance(buffer_fp1_out, N_BUFFER);
+            float fp8_max = max(buffer_fp7_out, N_BUFFER);
+            dtc_t label = dtc(fp3_max, fp5_min, fp2_var, fp8_max);
             char *label_str = "";
 
             //Use the calculated label for further processing
@@ -241,17 +245,13 @@ int main(void)
             {
                     label_str = "suboptimal_left_centered";
             }
-            else if(label == suboptimal_too_much_force)
-            {
-                    label_str = "suboptimal_too_much_force";
-            }
             else if(label == optimal)
             {
                     label_str = "optimal";
             }
-            else if(label == optimal)
+            else if(label == not_recomended_low_finger_placement)
             {
-                    label_str = "optimal";
+                    label_str = "not_recommended_low_fp";
             }
             // Set final timestamp
             ms2 = ms;

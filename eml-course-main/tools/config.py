@@ -20,7 +20,7 @@ BAUDRATE = 115200
 
 # TODO Set feature calculation parameters
 #      Valid BLOCK_TYPE values are: BLOCK or SLIDING
-BLOCK_SIZE = 10
+BLOCK_SIZE = 100
 BLOCK_TYPE = 'SLIDING'
 
 

@@ -34,7 +34,49 @@
  *
  *****************************************************************************/
 #include <stdint.h>
-#include "features_calc.h"
+#include "features.h"
+
+/*!
+ * \brief Finds the minimum value in the input data
+ *
+ * The feature minimum finds the minimum value in the input data.
+ *
+ *
+ *         .
+ *       .   .
+ *     .       .
+ *    .          .                        .
+ *                .                    .     .           . .
+ *                 .                .           .      .     .
+ *                  .            .                  .
+ *                    .       .
+ *                      .   .
+ *                        X
+ *
+ *  ---------------------------------------------------------- ->t
+ *    |                                                   |
+ *    |<------------------- n samples ------------------->|
+ *
+ * Input parameters are not checked for validity in order to maximize
+ * performance.
+ *
+ * \param[in]  data A pointer to the data array
+ * \param[in]  n    The number of data items in the array
+ *
+ * \return The minimum value in the input data
+ */
+float max(float *data, const uint32_t n)
+{
+    float max = data[0];
+
+    for(uint32_t i=1; i<n; ++i)
+    {
+        max = (data[i] > max) ? data[i] : max;
+    }
+
+    return max;
+}
+
 
 /*!
  * \brief Finds the minimum value in the input data
@@ -69,7 +111,7 @@ float min(float *data, const uint32_t n)
 {
     float min = data[0];
 
-    for (uint32_t i = 1; i < n; ++i)
+    for(uint32_t i=1; i<n; ++i)
     {
         min = (data[i] < min) ? data[i] : min;
     }
@@ -106,17 +148,17 @@ float min(float *data, const uint32_t n)
  *
  * \return The maximum value in the input data
  */
-float max(float *data, const uint32_t n)
-{
-    float max = data[0];
+// float max(float *data, const uint32_t n)
+// {
+//     float max = data[0];
 
-    for (uint32_t i = 1; i < n; ++i)
-    {
-        max = (data[i] > max) ? data[i] : max;
-    }
+//     for(uint32_t i=1; i<n; ++i)
+//     {
+//         max = (data[i] > max) ? data[i] : max;
+//     }
 
-    return max;
-}
+//     return max;
+// }
 
 /*!
  * \brief Computes the avarage of the input data
@@ -137,7 +179,7 @@ float mean(float *data, const uint32_t n)
 {
     float sum = 0.0f;
 
-    for (uint32_t i = 0; i < n; ++i)
+    for(uint32_t i=0; i<n; ++i)
     {
         sum += data[i];
     }
@@ -170,7 +212,7 @@ float variance(float *data, const uint32_t n)
 
     float sq_diff = 0.0f;
 
-    for (uint32_t i = 0; i < n; ++i)
+    for(uint32_t i=0; i<n; ++i)
     {
         sq_diff += (data[i] - m) * (data[i] - m);
     }
@@ -200,7 +242,7 @@ float energy(float *data, const uint32_t n)
 {
     float energy = 0.0f;
 
-    for (uint32_t i = 0; i < n; ++i)
+    for(uint32_t i=0; i<n; ++i)
     {
         energy += (data[i] * data[i]);
     }
@@ -243,7 +285,7 @@ float peak_to_peak(float *data, const uint32_t n)
     float min = data[0];
     float max = data[0];
 
-    for (uint32_t i = 1; i < n; ++i)
+    for(uint32_t i=1; i<n; ++i)
     {
         min = (data[i] < min) ? data[i] : min;
         max = (data[i] > max) ? data[i] : max;
